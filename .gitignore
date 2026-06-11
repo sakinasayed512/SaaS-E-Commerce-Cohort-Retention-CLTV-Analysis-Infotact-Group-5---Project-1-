@@ -3,3 +3,4 @@ desktop.ini
 *.xlsx
 *.sqlite
 .env
+*.pkl
