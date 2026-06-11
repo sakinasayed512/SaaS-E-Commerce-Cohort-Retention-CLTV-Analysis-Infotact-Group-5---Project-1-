@@ -1,0 +1,6 @@
+desktop.ini
+*.csv
+*.xlsx
+*.sqlite
+.env
+*.pkl
