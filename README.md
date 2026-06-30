@@ -50,3 +50,12 @@ guidelines. Download it directly from the link above.
 Python, Pandas, Jupyter Notebook, Power BI, Git/GitHub
 
 ## Repository Structure
+├── SaaS-E-Commerce-Cohort-Retention...ipynb   (main analysis notebook)
+├── beckley_week2_cohort_matrix.ipynb
+├── README.md
+├── .gitignore
+
+## How to Run
+1. Download the dataset from the UCI link above
+2. Place it in the project folder (do not commit it)
+3. Open the main notebook in Jupyter and run cells top to bottom
