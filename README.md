@@ -1,41 +1,52 @@
-# SaaS & E-Commerce Cohort Retention & CLTV Analysis
+# SaaS / E-Commerce Cohort Retention & CLTV Analysis
+**Infotact Internship — Group 5**
 
-## 📌 Project Overview
-This project focuses on analyzing customer behavior for SaaS and E-Commerce business models using the `OnlineRetail` dataset. By implementing **Cohort Analysis** and calculating **Customer Lifetime Value (CLTV)**, the project aims to:
-* Uncover granular patterns in user retention and behavioral trends over time.
-* Identify high-value customer segments to help optimize marketing spend.
-* Isolate transaction anomalies (such as cancellations) to maintain data integrity.
-* Provide data-driven insights to improve long-term customer loyalty and evaluate overall brand health.
+## Project Overview
+This project analyzes customer retention and lifetime value using the UCI 
+Online Retail Dataset (541,909 transactions, Dec 2010 – Dec 2011). The goal 
+is to understand how long customers stay active after their first purchase, 
+and how much value different customer segments bring to the business.
 
-This analysis was developed by **Group 5 - Infotact Project 1**.
+## Team
+| Member | Role |
+|--------|------|
+| Sakina | Team Lead, Week 1 & Week 3(Data Cleaning & EDA), (CLTV Calculation) |
+| Beckley | Week 2 (Cohort Retention Matrix) |
+| Sanket | Week 4 (Visualization & Dashboard) |
 
----
 
-## 📂 Repository Structure & Workflow
-The repository contains the data pipeline and incremental progress notebooks tracked across the project lifecycle:
+## Dataset
+UCI Online Retail Dataset — Online Retail.csv  
+Source: https://archive.ics.uci.edu/dataset/352/online+retail  
+**Note:** Raw dataset is not committed to this repo per data privacy 
+guidelines. Download it directly from the link above.
 
-* **`data/`**: Directory containing the core transactional dataset.
-* **`feature-sakina-work`**: Focuses on initial data loading, data profile checking, establishing schema validation, and early exploratory data profiling.
-* **`beckley_week2_cohort_matrix.ipynb`**: Builds the core behavioral cohort matrices to evaluate retention metrics across specific user groups over time.
-* **`SaaS-E-Commerce-Cohort-Retention-CLTV-Analysis-Infotact-Group-5-Project-1.ipynb`**: The final master notebook documenting advanced exploratory data analysis (EDA), localized cancellation patterns, and finalized cohort logic.
+## Week 1 — Data Cleaning & EDA ✅
+- Removed missing CustomerIDs, cancelled orders, negative quantities/prices
+- Converted CustomerID to integer, InvoiceDate to datetime
+- Calculated CohortMonth (each customer's first purchase month)
+- Added TotalPrice column (Quantity x UnitPrice)
+- Final cleaned shape: 397,884 rows x 10 columns
 
----
+## Week 2 — Cohort Retention Matrix ✅
+- Calculated CohortIndex (months since first purchase)
+- Built retention matrix using groupby and pivot
+- Converted to percentage retention
+- **Key finding:** Retention drops to ~15-25% by Month 2 across most 
+  cohorts. December 2010 cohort retains best long-term (~26.6% at Month 13)
 
-## 📊 Key Features & Dataset Highlights
-* **Dataset Scale**: Processed and analyzed a transactional dataset containing over **540,000 rows** and **8 core columns**.
-* **Global Footprint**: Tracked unique customer behavior across more than **4,300 unique customers** spanning **38 different countries**.
-* **Cohort Retention Analysis**: Tracks monthly and weekly user retention rates using behavioral heatmaps to pinpoint exactly when and where customers drop off.
-* **Advanced Cancellation Logic**: Explicitly documents and handles transactional cancellation patterns within the data pipeline to prevent retention distortions.
-* **CLTV Modeling**: Calculates the long-term financial value of different customer segments to forecast revenue and guide acquisition strategy.
+## Week 3 — CLTV Calculation 🔄 In Progress
+- Calculated Average Order Value (AOV) and Purchase Frequency per customer
+- Segmented customers into Low/Medium/High value tiers
+- **Key finding:** High value segment (top third of customers) contributes 
+  84.9% of total revenue
 
----
+## Week 4 — Visualization & Dashboard 🔄 In Progress
+- Power BI dashboard in development
+- Cohort retention heatmap to be added
+- Final business report to follow
 
-## 🛠️ Tech Stack & Prerequisites
-* **Language**: Python
-* **Core Libraries**: `pandas`, `numpy`, `matplotlib`, `seaborn`
+## Tools Used
+Python, Pandas, Jupyter Notebook, Power BI, Git/GitHub
 
-### Installation
-Ensure you have the required data science libraries installed before running the notebooks:
-
-```bash
-pip install pandas numpy matplotlib seaborn jupyter
+## Repository Structure
