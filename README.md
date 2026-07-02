@@ -10,9 +10,9 @@ and how much value different customer segments bring to the business.
 ## Team
 | Member | Role |
 |--------|------|
-| Sakina | Team Lead, Week 1 & Week 3(Data Cleaning & EDA), (CLTV Calculation) |
+| Sakina | Team Lead, Week 1,Week 3 & Week 4(Data Cleaning & EDA), (CLTV Calculation), (Tableau Dashboard) |
 | Beckley | Week 2 (Cohort Retention Matrix) |
-| Sanket | Week 4 (Visualization & Dashboard) |
+| Sanket | Week 4 (PowerBI Dashboard) |
 
 
 ## Dataset
@@ -35,22 +35,16 @@ guidelines. Download it directly from the link above.
 - **Key finding:** Retention drops to ~15-25% by Month 2 across most 
   cohorts. December 2010 cohort retains best long-term (~26.6% at Month 13)
 
-## Week 3 — CLTV Calculation 🔄 In Progress
+## Week 3 — CLTV Calculation ✅
 - Calculated Average Order Value (AOV) and Purchase Frequency per customer
 - Segmented customers into Low/Medium/High value tiers
 - **Key finding:** High value segment (top third of customers) contributes 
   84.9% of total revenue
 
-## Week 4 — Visualization & Dashboard 🔄 In Progress
-- Power BI dashboard in development
-- Cohort retention heatmap to be added
-- Final business report to follow
+## Week 4 — Visualization & Dashboard ✅
+- Power BI/Tableau dashboard
+- Cohort retention heatmap added
+- Final business report - main readme
 
 ## Tools Used
 Python, Pandas, Jupyter Notebook, Power BI, Git/GitHub
-
-## Repository Structure
-├── SaaS-E-Commerce-Cohort-Retention...ipynb   (main analysis notebook)
-├── beckley_week2_cohort_matrix.ipynb
-├── README.md
-├── .gitignore
